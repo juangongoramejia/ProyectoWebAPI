@@ -15,6 +15,7 @@ namespace WebAPI.Data
         {
             using (SqlConnection oConexion = new SqlConnection(Conexion.rutaConexion))
             {
+                var algo = "dd";
                 SqlCommand cmd = new SqlCommand("usp_registrar", oConexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@documentoidentidad", oUsuario.DocumentoIdentidad);
